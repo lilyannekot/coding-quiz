@@ -1,11 +1,19 @@
 // Starts quiz when button is clicked
-var startButton = document.querySelectorAll("#startQuiz")
-startButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    console.log("Button clicked");
-})
+var startBtn = document.getElementById("startQuiz")
+startBtn.addEventListener("click", startQuiz) 
 
-var quizContainer = document.querySelectorAll("quiz");
+function startQuiz() {
+    console.log("Quiz has started");
+    startBtn.classList.add("hide");
+}
+
+function setNextQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
 
 // Array for quiz questions
 var quizQuestions = [ 
@@ -47,23 +55,8 @@ function countdown() {
 
 countdown();
 
-// Function to display the quiz questions in order
-function quizQuestions(){
-    var output = [];
-}
 
-submitBtn.addEventListener("click", showResults);
+// var highScore = document.querySelector("#highscore");
 
-// Displaying scores and initials at the end 
-// function getScore(form) {
-//     showCorrectAnswers();
-
-//     var score = 0;
-//     for (i = 0, i++);
-// }
-
-
-var highScore = document.querySelector("#highscore");
-
-var totalScores = localStorage.setItem("totalScores");
-localStorage.setItem("totalScores", totalScores);
+// var totalScores = localStorage.setItem("totalScores");
+// localStorage.setItem("totalScores", totalScores);
