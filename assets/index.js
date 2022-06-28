@@ -1,7 +1,7 @@
 // Starts quiz when button is clicked
-document.getElementById("startButton").addEventListener("click", function() {
-    var target = document.getElementById("startButton");
-    target.
+var btn = document.getElementById("startButton")
+button.addEventListener("click", function() {
+    
 })
 
 // Creates timer for countdown of quiz
@@ -22,3 +22,44 @@ function countdown() {
 }
 
 countdown();
+
+var quizContainer = document.getElementById("quiz");
+var resultsContainer = document.getElementById("results");
+var submitBtn = document.getElementById("submit");
+
+// Array for quiz questions
+var quizQuestions = [ {
+    question: "What does HTML stand for?",
+    answer: {
+        a: "Hypertext Markup Language",
+        d: "Having Many Laughs",
+        c: "Hypertension Marker Linguistics"
+    },
+    correctAnswer: "a"
+    },
+    {
+    question: "A set of statements that performs a task or calculates a value is ___",
+    answer: {
+        a: "An object",
+        b: "A function",
+        c: "Scope"
+    },
+    correctAnswer: "b"
+    },
+    {
+    question: "",
+    answer: {
+        a: "Brendan Eich",
+        b: "Tim Berners-Lee",
+        c: "Bill Gates"
+    },
+    correctAnswer: "a"
+    },
+];
+
+// Function to display the quiz questions in order
+function quizQuestions(){
+    var output = [];
+}
+
+submitBtn.addEventListener("click", showResults);
