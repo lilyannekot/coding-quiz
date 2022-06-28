@@ -13,6 +13,11 @@ body p {
     padding-bottom: 50px;
 }
 
+.questionContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .btn {
     display: flex;
     margin: 8px;
@@ -33,6 +38,21 @@ body p {
 
 .btnIncorrect {
     background-color: red;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.startBtn {
+    background-color: orange;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.hide {
+    display:none;
 }
 
 #countdown {
