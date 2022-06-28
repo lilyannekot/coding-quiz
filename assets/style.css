@@ -8,9 +8,31 @@ body h1 {
     padding-bottom: 50px;
 }
 
-body button {
+body p {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.btn {
     display: flex;
-    margin: auto;
+    margin: 8px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(181, 148, 196);
+    outline: none;
+}
+
+.btn:hover {
+    background-color: purple;
+}
+
+.btnCorrect {
+    background-color: green;
+}
+
+.btnIncorrect {
+    background-color: red;
 }
 
 #countdown {

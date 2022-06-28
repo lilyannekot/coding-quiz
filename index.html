@@ -9,9 +9,32 @@
 </head>
 <body>
     <h1>Coding Assessment</h1>
-    <br>
-    <button>Start Quiz</button>
+    <P>The following quiz will ask you three code-related questions. If you get a question wrong, 
+        5 seconds will be deducted from the time you have left.</P>
 
-    <h2 id="countdown" class="timer"></h2>
+    <div class="container">
+        <div id="questionContainer" class="hide"></div>
+            <div id="questions">Questions</div>
+            <div id="answerOptions"></div>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+        <div class="controls">
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+    </div>
+
+    <!--Division for timer-->
+    <div id="countdown" class="timer"></div>
+
+    <!--Section for quiz questions-->
+    <section id="quiz">
+
+    </section>
+    <div>
+        <ul id="highscore"></ul>
+    </div>
+
+    <script src="assets/index.js"></script>
 </body>
 </html>
