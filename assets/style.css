@@ -1,0 +1,20 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body h1 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+body button {
+    display: flex;
+    margin: auto;
+}
+
+#countdown {
+    position: relative;
+    top: -16px;
+    right: -700px;
+}
