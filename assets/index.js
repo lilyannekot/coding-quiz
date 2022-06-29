@@ -1,4 +1,4 @@
-// Starts quiz when button is clicked
+// Declares all variables globally
 var startBtn = document.getElementById("startQuiz")
 var questionContainerEl = document.getElementById("questionContainer")
 var questionEl = document.getElementById("questions")
@@ -10,7 +10,7 @@ var timeLeft = 60;
 var penalty = 5;
 var scoreList = document.getElementById('highscore')
 
-
+// Event listeners for when question buttons have been pressed
 startBtn.addEventListener("click", startQuiz) 
 btn1.addEventListener("click", checkAnswer)
 btn1.addEventListener("click", setNextQuestion)
@@ -40,13 +40,15 @@ var quizQuestions = [
 
 var i = 0
 
+// Causes next question to appear once previous question has been answered
 function setNextQuestion() {
     if(i===quizQuestions.length){
         clearInterval(window.timeInterval)
-        var userInit = prompt("enter your initials")
+        var userInit = prompt("Enter your initials to save your score!")
         localStorage.setItem(userInit, timeLeft)
         questionContainerEl.classList.add("hide");
         window.timeMessage.classList.add("hide");
+        // Loops through local storage in order to display previous results at the end of the quiz
         for (index=0;index<localStorage.length;index++){
         var li = document.createElement('li')
         scoreList.appendChild(li)
@@ -62,6 +64,7 @@ function setNextQuestion() {
     console.log(i)
 }
 
+// Penalizes users for answering a question wrong (remove 5 seconds)
 function checkAnswer(e) {
     
     if (e.target.innerText !== quizQuestions[i-1].answer) {
@@ -70,11 +73,14 @@ function checkAnswer(e) {
     
 }
 
+// Starts quiz: questions are hidden until start button is pressed
 function startQuiz() {
     console.log("Quiz has started");
     startBtn.classList.add("hide");
     questionContainerEl.classList.remove("hide");
     document.querySelector('.intro').classList.add("hide");
+    scoreList.classList.remove("hide");
+
     countdown();
     setNextQuestion();
 } 
@@ -95,9 +101,3 @@ function countdown() {
         }
     }, 1000);
 }
-
-
-// var highScore = document.querySelector("#highscore");
-
-// var totalScores = localStorage.setItem("totalScores");
-// localStorage.setItem("totalScores", totalScores);

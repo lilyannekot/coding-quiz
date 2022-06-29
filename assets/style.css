@@ -60,3 +60,10 @@ body p {
     top: -16px;
     right: -700px;
 }
+
+ul {
+    background-color: orange;
+    outline-style: double;
+    text-align: center;
+    list-style: none;
+}
